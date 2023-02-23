@@ -1,0 +1,15 @@
+[Unit]
+Description=items
+
+[Service]
+Environment=PORT=8080
+Environment=GO_ENV=production
+Environment=GIN_MODE=release
+Type=simple
+Restart=always
+RestartSec=5s
+ExecStart=/home/ec2-user/task1
+
+[Install]
+WantedBy=multi-user.target
+
